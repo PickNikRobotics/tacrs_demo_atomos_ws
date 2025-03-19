@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>atomos_xlink_hw_config</name>
+  <version>7.5.0</version>
+
+  <description>MoveIt Pro hardware configuration package for the Motiv xLink arm at Atomos.</description>
+
+  <maintainer email="richard.pratt@picknik.ai">Richard Pratt</maintainer>
+
+  <license>Proprietary</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>motiv_xlink_hw_config</depend>
+
+  <depend>apriltag_ros</depend>
+
+  <!-- <exec_depend>joint_trajectory_admittance_controller</exec_depend>
+  <exec_depend>velocity_force_controller</exec_depend> -->
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

@@ -1,0 +1,6 @@
+[submodule "src/dependencies/motiv_xlink_pro_config"]
+	path = src/dependencies/motiv_xlink_pro_config
+	url = git@github.com:PickNikRoboticsServices/motiv_xlink_pro_config.git
+[submodule "src/dependencies/zed_open_capture_ros"]
+	path = src/dependencies/zed_open_capture_ros
+	url = git@github.com:PickNikRobotics/zed_open_capture_ros.git
