@@ -4,3 +4,7 @@
 [submodule "src/dependencies/zed_open_capture_ros"]
 	path = src/dependencies/zed_open_capture_ros
 	url = git@github.com:PickNikRobotics/zed_open_capture_ros.git
+[submodule "src/dependencies/fuse"]
+	path = src/dependencies/fuse
+	url = git@github.com:PickNikRobotics/fuse.git
+	branch = humble
