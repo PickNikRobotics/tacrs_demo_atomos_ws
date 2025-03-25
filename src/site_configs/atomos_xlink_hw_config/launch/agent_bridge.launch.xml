@@ -2,5 +2,6 @@
   <include file="$(find-pkg-share moveit_studio_agent)/launch/studio_agent_bridge.launch.xml" />
   <include file="$(find-pkg-share atomos_xlink_hw_config)/launch/cameras.launch.xml" />
   <include file="$(find-pkg-share atomos_xlink_hw_config)/launch/36h11.launch.yml" />
+  <include file="$(find-pkg-share atomos_xlink_hw_config)/launch/36h11_right.launch.yml" />
   <include file="$(find-pkg-share atomos_xlink_hw_config)/launch/fuse.launch.py"/>
 </launch>
