@@ -46,9 +46,12 @@ state_estimator:
       # fuse will publish an odom from the `estimation_frame` to this frame (and optionally a tf, too)
       target_frame: 'target_frame'
 
+      base_frame: "world"
+
       # this is the frame that all transforms should be parented to for fuse to use as a measurement
       # thus a measurement will be a tf from `estimation_frame` to any frame in `transforms` (see above)
-      estimation_frame: 'zed_left_camera_optical_frame'
+      estimation_frames:
+        ["zed_left_camera_optical_frame", "zed_right_camera_optical_frame"]
       position_dimensions: ['x', 'y', 'z']
       orientation_dimensions: ['roll', 'pitch', 'yaw']
       # TODO(anyone): set these empirically (collect data and estimate covariances) instead of just with arbitrary values
@@ -73,9 +76,9 @@ state_estimator:
       odom_frame_id: 'odom'
 
       # this should be the same as `estimation_frame` in `transform_sensor` above
-      map_frame_id: 'zed_left_camera_optical_frame'
+      map_frame_id: 'world'
       # this should be the same as `map_frame_id`
-      world_frame_id: 'zed_left_camera_optical_frame'
+      world_frame_id: 'world'
 
       # optionally publish a tf
       publish_tf: true
