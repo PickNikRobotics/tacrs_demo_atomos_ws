@@ -19,13 +19,13 @@
     - joint_6
     - joint_7
     position:
-    - 0.9018561330104042
-    - 0.8123564947643525
-    - -0.03318406702145245
-    - 1.8893429939902087
-    - 0.10648643571720097
-    - 1.934439885048016
-    - 0.11529251984379131
+    - -1.553544552964579
+    - -2.432621095806919
+    - -0.03381909853946621
+    - -2.545208957015267
+    - 0.10310187305970997
+    - 0.6445446898536797
+    - -0.291080782003567
     velocity: []
   multi_dof_joint_state:
     header:
@@ -37,7 +37,7 @@
     transforms: []
     twist: []
     wrench: []
-  name: test1
+  name: calibrate_zed_1
 - description: ''
   favorite: false
   joint_group_names:
@@ -59,13 +59,13 @@
     - joint_6
     - joint_7
     position:
-    - -1.2866912477296262
-    - 1.6869639493306707
-    - -1.1994598034156914
-    - -1.3344039048897551
-    - -1.346424705980882
-    - 2.1763658575764313
-    - -0.3994321093986724
+    - -1.1756937317066678
+    - -2.268665821504454
+    - -0.3485692097406112
+    - -2.3101308367354867
+    - -0.16341650589052387
+    - 0.4575637118099875
+    - -0.10321448753523697
     velocity: []
   multi_dof_joint_state:
     header:
@@ -77,4 +77,164 @@
     transforms: []
     twist: []
     wrench: []
-  name: test2
+  name: calibrate_zed_2
+- description: ''
+  favorite: false
+  joint_group_names:
+  - xlink_arm
+  - xlink_gripper
+  joint_state:
+    effort: []
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    name:
+    - joint_1
+    - joint_2
+    - joint_3
+    - joint_4
+    - joint_5
+    - joint_6
+    - joint_7
+    position:
+    - -1.5711092797533395
+    - -2.5453329464540784
+    - -0.06694905178178419
+    - -2.3832950064584546
+    - -0.11836991070641534
+    - 0.8974545260859429
+    - 0.26629155735880294
+    velocity: []
+  multi_dof_joint_state:
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    joint_names: []
+    transforms: []
+    twist: []
+    wrench: []
+  name: calibrate_zed_3
+- description: ''
+  favorite: false
+  joint_group_names:
+  - xlink_arm
+  - xlink_gripper
+  joint_state:
+    effort: []
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    name:
+    - joint_1
+    - joint_2
+    - joint_3
+    - joint_4
+    - joint_5
+    - joint_6
+    - joint_7
+    position:
+    - -1.57110927975334
+    - -2.545332946454078
+    - -0.0669490517817842
+    - -2.3832950064584533
+    - -0.11836991070641528
+    - 0.8974545260859427
+    - 1.571291557358789
+    velocity: []
+  multi_dof_joint_state:
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    joint_names: []
+    transforms: []
+    twist: []
+    wrench: []
+  name: home_horz_1
+- description: ''
+  favorite: false
+  joint_group_names:
+  - xlink_arm
+  - xlink_gripper
+  joint_state:
+    effort: []
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    name:
+    - joint_1
+    - joint_2
+    - joint_3
+    - joint_4
+    - joint_5
+    - joint_6
+    - joint_7
+    position:
+    - -0.06357985281949473
+    - -2.5453384778678867
+    - -0.066943421341846
+    - -2.240070597177611
+    - 0.10588078784932743
+    - 0.3674739089369782
+    - -0.09290926411329357
+    velocity: []
+  multi_dof_joint_state:
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    joint_names: []
+    transforms: []
+    twist: []
+    wrench: []
+  name: home_vert_1
+- description: ''
+  favorite: false
+  joint_group_names:
+  - xlink_arm
+  - xlink_gripper
+  joint_state:
+    effort: []
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    name:
+    - joint_1
+    - joint_2
+    - joint_3
+    - joint_4
+    - joint_5
+    - joint_6
+    - joint_7
+    position:
+    - 0.9018561330104042
+    - 0.8123564947643525
+    - -0.03318406702145245
+    - 1.8893429939902087
+    - 0.10648643571720097
+    - 1.934439885048016
+    - 0.11529251984379131
+    velocity: []
+  multi_dof_joint_state:
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    joint_names: []
+    transforms: []
+    twist: []
+    wrench: []
+  name: test1
