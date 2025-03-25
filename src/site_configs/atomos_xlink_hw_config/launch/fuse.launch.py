@@ -22,7 +22,7 @@ from launch_ros.substitutions import FindPackageShare
 
 
 def generate_launch_description():
-    pkg_dir = FindPackageShare("picknik_006_gen3_hw")
+    pkg_dir = FindPackageShare("atomos_xlink_hw_config")
 
     return LaunchDescription(
         [

@@ -19,7 +19,7 @@ launch:
       - from: /apriltag_right/camera_info
         to: /zed2i_camera/right/camera_info
       param:
-      - from: $(find-pkg-share picknik_006_gen3_hw)/launch/tags_36h11.yaml
+      - from: $(find-pkg-share atomos_xlink_hw_config)/launch/tags_36h11.yaml
       extra_arg:
       - name: use_intra_process_comms
         value: "True"
