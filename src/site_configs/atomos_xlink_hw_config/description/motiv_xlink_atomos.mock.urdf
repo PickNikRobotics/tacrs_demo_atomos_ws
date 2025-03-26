@@ -24,7 +24,6 @@
     <child link="servicer_sled_link" />
     <origin xyz="0 0 0" rpy="0 0 0" />
   </joint>
-  <!-- Create world link -->
   <link name="world" />
   <!-- Material Color Definitions -->
   <material name="grey">
@@ -202,7 +201,9 @@
   <!-- JOINTS -->
   <!-- Dynamics and velocity limits are placeholders -->
   <joint name="base_joint" type="fixed">
-    <origin rpy="-1.5707963267948966 0.0 -1.5707963267948966" xyz="0 0 0" />
+    <!-- <origin rpy="-1.5707963267948966 0.0 -1.5707963267948966" xyz="0 0 0" /> -->
+    <origin rpy="-3.14159 -1.5707963267948966 0.0" xyz="0 0 0" />
+    
     <parent link="servicer_sled_link" />
     <child link="base_link" />
   </joint>
@@ -575,9 +576,9 @@
   <!-- zed camera calibration pose-->
   <link name="estimated_zed_base_frame" />
   <joint name="estimated_zed_base_frame_joint" type="fixed">
-    <parent link="base_link" />
+    <parent link="servicer_sled_link" />
     <child link="estimated_zed_base_frame" />
-    <origin xyz="0.3 -0.2 -0.05" rpy="1.542 -1.542 0" />
+    <origin xyz="-0.035 -0.39 0.24" rpy="0 0 0" />
   </joint>
 
   <!-- zed camera URDF-->
@@ -660,20 +661,88 @@
       <child link="zed_right_camera_optical_frame" />
     </joint>
 
+<!-- Environment -->
+  <link name="floor">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="4.0 4.0 0.2" />
+      </geometry>
+      <material name="transparent_blue">
+        <color rgba="0 0 1 0.3"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="4.0 4.0 0.2" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="floor_joint" type="fixed">
+    <parent link="servicer_sled_link" />
+    <child link="floor" />
+      <origin rpy="0 0 0" xyz="0 0 -0.57" />
+  </joint>
+
+  <link name="back">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <material name="transparent_blue">
+        <color rgba="0 0 1 0.3"/>
+      </material>
+      <geometry>
+        <box size="0.2 2.0 2.0" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.2 2.0 2.0" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="back_joint" type="fixed">
+    <parent link="servicer_sled_link" />
+    <child link="back" />
+      <origin rpy="0 0 0" xyz="-0.11 0 0" />
+  </joint>
+
+  <link name="tank_air_hoses">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.15 0.15 0.15" />
+      </geometry>1
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <box size="0.15 0.15 0.15" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="tank_air_hoses_joint" type="fixed">
+    <parent link="servicer_sled_link" />
+    <child link="tank_air_hoses" />
+      <origin rpy="0 0 0" xyz="0.26 -0.38 -0.33" />
+  </joint>
+
+
   <ros2_control name="xlink_system" type="system">
     <hardware>
-      <!-- <plugin>xlink_core_hardware/xLinkSystem</plugin> -->
-      <plugin>mock_components/GenericSystem</plugin>
+      <plugin>xlink_core_hardware/xLinkSystem</plugin>
+      <!-- <plugin>mock_components/GenericSystem</plugin> -->
       <param name="bus_device">/dev/ttyUSB0</param>
       <param name="baud_rate">1000000</param>
       <param name="parity">O</param>
       <!-- Add the joint ids here, should be of the form "int,int,int" etc -->
-      <param name="joint_ids">9,31,7,30,36,14,41</param>
+      <param name="joint_ids">17,51,46,39,24,14,19</param>
       <!-- FTS ID-->
       <param name="fts_id">2</param>
       <param name="fts_frame">fts_link</param>
       <param name="has_gripper">True</param>
-      <param name="gripper_id">6</param>
+      <param name="gripper_id">58</param>
       <param name="control_mode">POSVEL</param>
     </hardware>
     <joint name="joint_1">
