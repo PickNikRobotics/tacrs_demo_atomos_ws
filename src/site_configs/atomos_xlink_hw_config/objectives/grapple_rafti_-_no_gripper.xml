@@ -21,13 +21,13 @@
           </Decorator>
         </Control>
         <Control ID="Sequence" name="TopLevelSequence">
-          <Action ID="WaitForDuration" delay_duration="5.000000" name="Publish Odom, but delay to start capture"/>
+          <Action ID="WaitForDuration" delay_duration="2.0" name="Publish Odom, but delay to start capture"/>
           <Decorator ID="KeepRunningUntilFailure">
             <Action ID="PublishVelocityForceCommand" wrench_gain="0.1" velocity_controlled_axes="1;1;1;1;1;1" force_controlled_axes="0;0;0;0;0;0" publish_rate="10" twist_stamped="{desired_twist}" velocity_force_controller_command_topic="/velocity_force_controller/command" wrench_stamped="{desired_wrench}"/>
           </Decorator>
         </Control>
         <Decorator ID="KeepRunningUntilFailure">
-          <Action ID="PoseJog" controller_names="velocity_force_controller" link_padding="0.020000" planning_group_names="xlink_arm" stop_safety_factor="1.300000"/>
+          <Action ID="PoseJog" controller_names="velocity_force_controller" link_padding="0.010000" planning_group_names="xlink_arm" stop_safety_factor="1.300000"/>
         </Decorator>
         <Control ID="Sequence" name="TopLevelSequence">
           <Control ID="Parallel" failure_count="1" success_count="1">
@@ -65,7 +65,11 @@
     </Control>
   </BehaviorTree>
   <TreeNodesModel>
-    <SubTree ID="Grapple RAFTI - No gripper"><MetadataFields>
+    <SubTree ID="Grapple RAFTI - No gripper">
+      <MetadataFields>
+        <Metadata runnable="true"/>
+      </MetadataFields>
+    <MetadataFields>
         <Metadata runnable="true"/>
       </MetadataFields></SubTree>
   </TreeNodesModel>

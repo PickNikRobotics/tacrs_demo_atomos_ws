@@ -59,6 +59,46 @@
     - joint_6
     - joint_7
     position:
+    - 0.00038313865661621094
+    - -2.1648826599121094
+    - -0.00011992454528808594
+    - -2.149567127227783
+    - -0.0007908344268798828
+    - -2.384185791015625e-05
+    - 1.5713024139404297
+    velocity: []
+  multi_dof_joint_state:
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    joint_names: []
+    transforms: []
+    twist: []
+    wrench: []
+  name: home_horiz_1
+- description: ''
+  favorite: false
+  joint_group_names:
+  - xlink_arm
+  - xlink_gripper
+  joint_state:
+    effort: []
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    name:
+    - joint_1
+    - joint_2
+    - joint_3
+    - joint_4
+    - joint_5
+    - joint_6
+    - joint_7
+    position:
     - 1.5708110332489014
     - -2.5452985763549805
     - -0.0666205883026123
@@ -99,13 +139,13 @@
     - joint_6
     - joint_7
     position:
-    - 0.00038313865661621094
-    - -2.1648826599121094
-    - -0.00011992454528808594
-    - -2.149567127227783
-    - -0.0007908344268798828
-    - -2.384185791015625e-05
-    - 1.5713024139404297
+    - 0.0007305145263671875
+    - -1.3544955253601074
+    - -1.5598578453063965
+    - -1.6449341773986816
+    - -1.3942234516143799
+    - -1.5960502624511719
+    - 3.1133997440338135
     velocity: []
   multi_dof_joint_state:
     header:
@@ -117,7 +157,7 @@
     transforms: []
     twist: []
     wrench: []
-  name: home_horiz_1
+  name: start_elbow_side
 - description: ''
   favorite: false
   joint_group_names:

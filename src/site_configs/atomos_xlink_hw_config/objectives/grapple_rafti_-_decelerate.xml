@@ -28,7 +28,7 @@
           </Decorator>
         </Control>
         <Decorator ID="KeepRunningUntilFailure">
-          <Action ID="PoseJog" controller_names="velocity_force_controller" link_padding="0.010000" planning_group_names="xlink_arm" stop_safety_factor="1.200000"/>
+          <Action ID="PoseJog" controller_names="velocity_force_controller" link_padding="0.080000" planning_group_names="xlink_arm" stop_safety_factor="1.200000"/>
         </Decorator>
         <Control ID="Sequence" name="TopLevelSequence">
           <Control ID="Parallel" failure_count="1" success_count="1">
@@ -45,14 +45,17 @@
                   <Action ID="IsPoseNearIdentity" pose="{error_pose}" position_tolerance="0.02" rotation_tolerance="0.2"/>
                 </Control>
               </Decorator>
-              <Action ID="CreateStampedPose" reference_frame="world" stamped_pose="{target_pose_offset}" orientation_xyzw="-0.7071068;0.7071068;0;0" position_xyz="0;0;0.10"/>
+              <Action ID="CreateStampedPose" reference_frame="world" stamped_pose="{target_pose_offset}" orientation_xyzw="-0.7071068;0.7071068;0;0" position_xyz="0;0;0.06"/>
               <Decorator ID="RetryUntilSuccessful" num_attempts="-1">
                 <Control ID="Sequence">
                   <Action ID="WaitForDuration" name="needed so agent doesn't crash" delay_duration="0.1"/>
                   <Action ID="IsPoseNearIdentity" pose="{error_pose}" position_tolerance="0.01" rotation_tolerance="0.1"/>
                 </Control>
               </Decorator>
-              <SubTree ID="Close Gripper" _collapsed="true"/>
+              <Control ID="Fallback">
+                <SubTree ID="Close Gripper" _collapsed="true"/>
+                <Action ID="AlwaysSuccess"/>
+              </Control>
             </Control>
           </Control>
           <Decorator ID="Repeat" num_cycles="100" name="This * time_step = total decel time. Set to 100 for simplicity.">

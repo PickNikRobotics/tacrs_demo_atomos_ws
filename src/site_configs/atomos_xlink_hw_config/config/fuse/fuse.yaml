@@ -131,7 +131,7 @@ state_estimator:
       base_link_output_frame_id: "target_frame"
 
       # this should typically just be `odom``
-      odom_frame_id: "odom"
+      odom_frame_id: "world"
 
       # this should be the same as `estimation_frame` in `transform_sensor` above
       map_frame_id: "world"
