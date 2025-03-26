@@ -125,7 +125,7 @@ state_estimator:
     filtered_publisher:
       topic: "odom_filtered"
       # this should be the same as `target_frame` from `transform_sensor` above
-      base_link_frame_id: "target_frame"
+      base_link_frame_id: "world"
 
       # this should be the same as `base_link_frame_id` above
       base_link_output_frame_id: "target_frame"
