@@ -623,7 +623,8 @@
     <parent link="servicer_sled_link" />
     <child link="estimated_zed_base_frame" />
     <!-- <origin xyz="-0.035 -0.39 0.24" rpy="0 0 0" /> -->
-    <origin xyz="-0.050 -0.39 0.24" rpy="0 0 0" />
+    <!--<origin xyz="-0.050 -0.37 0.24" rpy="0 0 0" />-->
+    <origin rpy="0 0 0" xyz="-0.024939 -0.37902 0.21445" />
   </joint>
 
   <!-- zed camera URDF-->
@@ -772,7 +773,6 @@
     <child link="tank_air_hoses" />
       <origin rpy="0 0 0" xyz="0.26 -0.38 -0.33" />
   </joint>
-
 
   <ros2_control name="xlink_system" type="system">
     <hardware>
