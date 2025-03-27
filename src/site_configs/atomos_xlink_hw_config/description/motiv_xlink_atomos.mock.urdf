@@ -423,6 +423,23 @@
       <inertia ixx="0.000016" ixy="-0.000006" ixz="0" iyy="0.000016" iyz="0" izz="0.000020" />
     </inertial>
   </link>
+  <link name="left_rafti_finger_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomos_xlink_hw_config/description/assets/xlink_rafti_finger.stl" />
+      </geometry>
+      <material name="black" />
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomos_xlink_hw_config/description/assets/xlink_rafti_finger.stl" />
+      </geometry>
+    </collision>
+  </link>
   <link name="right_finger_link">
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
@@ -444,6 +461,23 @@
       <mass value="0.0618" />
       <inertia ixx="0.000016" ixy="-0.000006" ixz="0" iyy="0.000016" iyz="0" izz="0.000020" />
     </inertial>
+  </link>
+  <link name="right_rafti_finger_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomos_xlink_hw_config/description/assets/xlink_rafti_finger.stl" />
+      </geometry>
+      <material name="black" />
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomos_xlink_hw_config/description/assets/xlink_rafti_finger.stl" />
+      </geometry>
+    </collision>
   </link>
   <joint name="gripper_base_joint" type="fixed">
     <origin rpy="0 3.141592653589793 0" xyz="0 0 -0.029" />
@@ -494,6 +528,11 @@
     <limit effort="500.0" lower="0" upper="1.0" velocity="1.0" />
     <dynamics damping="20.0" friction="4.0" />
   </joint>
+  <joint name="left_rafti_finger_joint" type="fixed">
+    <origin rpy="3.14259 0 0" xyz="0 0 0" />
+    <parent link="left_finger_link" />
+    <child link="left_rafti_finger_link" />
+  </joint>
   <joint name="right_finger_joint" type="revolute">
     <mimic joint="gripper_joint" />
     <origin rpy="0 0 0" xyz="-.0003151 .0603242 0" />
@@ -503,39 +542,44 @@
     <limit effort="500.0" lower="0" upper="1.0" velocity="1.0" />
     <dynamics damping="20.0" friction="4.0" />
   </joint>
+  <joint name="right_rafti_finger_joint" type="fixed">
+    <origin rpy="3.14259 0 0" xyz="0 0 0" />
+    <parent link="right_finger_link" />
+    <child link="right_rafti_finger_link" />
+  </joint>
   <!-- camera body, with origin at bottom screw mount -->
-  <joint name="wrist_mounted_camera_joint" type="fixed">
-    <origin rpy="0 -1.5707963267948966 -3.141592653589793" xyz="0.05305 0 0.1324385" />
-    <parent link="xlink_gripper_base" />
-    <child link="wrist_mounted_camera_bottom_screw_frame" />
-  </joint>
-  <link name="wrist_mounted_camera_bottom_screw_frame" />
-  <joint name="wrist_mounted_camera_link_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0 0.02 0.0115" />
-    <parent link="wrist_mounted_camera_bottom_screw_frame" />
-    <child link="wrist_mounted_camera_link" />
-  </joint>
-  <link name="wrist_mounted_camera_link">
-    <visual>
-      <origin rpy="1.5707963267948966 0 1.5707963267948966" xyz="0.00987 -0.02 0" />
-      <geometry>
-        <mesh filename="file:///opt/ros/humble/share/realsense2_description/meshes/d415.stl" />
-      </geometry>
-      <material name="aluminum" />
-    </visual>
-    <collision>
-      <origin rpy="0 0 0" xyz="0 -0.02 0" />
-      <geometry>
-        <box size="0.02005 0.099 0.023" />
-      </geometry>
-    </collision>
-    <inertial>
-      <mass value="0.072" />
+  <!--<joint name="wrist_mounted_camera_joint" type="fixed">-->
+  <!--  <origin rpy="0 -1.5707963267948966 -3.141592653589793" xyz="0.05305 0 0.1324385" />-->
+  <!--  <parent link="xlink_gripper_base" />-->
+  <!--  <child link="wrist_mounted_camera_bottom_screw_frame" />-->
+  <!--</joint>-->
+  <!--<link name="wrist_mounted_camera_bottom_screw_frame" />-->
+  <!--<joint name="wrist_mounted_camera_link_joint" type="fixed">-->
+  <!--  <origin rpy="0 0 0" xyz="0 0.02 0.0115" />-->
+  <!--  <parent link="wrist_mounted_camera_bottom_screw_frame" />-->
+  <!--  <child link="wrist_mounted_camera_link" />-->
+  <!--</joint>-->
+  <!--<link name="wrist_mounted_camera_link">-->
+  <!--  <visual>-->
+  <!--    <origin rpy="1.5707963267948966 0 1.5707963267948966" xyz="0.00987 -0.02 0" />-->
+  <!--    <geometry>-->
+  <!--      <mesh filename="file:///opt/ros/humble/share/realsense2_description/meshes/d415.stl" />-->
+  <!--    </geometry>-->
+  <!--    <material name="aluminum" />-->
+  <!--  </visual>-->
+  <!--  <collision>-->
+  <!--    <origin rpy="0 0 0" xyz="0 -0.02 0" />-->
+  <!--    <geometry>-->
+  <!--      <box size="0.02005 0.099 0.023" />-->
+  <!--    </geometry>-->
+  <!--  </collision>-->
+  <!--  <inertial>-->
+  <!--    <mass value="0.072" />-->
       <!-- The following are not reliable values, and should not be used for modeling -->
-      <origin xyz="0 0 0" />
-      <inertia ixx="0.003881243" ixy="0.0" ixz="0.0" iyy="0.000498940" iyz="0.0" izz="0.003879257" />
-    </inertial>
-  </link>
+  <!--    <origin xyz="0 0 0" />-->
+  <!--    <inertia ixx="0.003881243" ixy="0.0" ixz="0.0" iyy="0.000498940" iyz="0.0" izz="0.003879257" />-->
+  <!--  </inertial>-->
+  <!--</link>-->
   <!-- Moveit Studio requires a link name called manual_grasp_link to perform quick tasks such as
   inspect surface -->
   <link name="manual_grasp_link" />
@@ -552,26 +596,26 @@
   </joint>
 
   <!-- camera calibration tool-->
-  <link name="calibration_tool_link">
-    <visual>
-      <geometry>
-        <mesh
-          filename="file://$(find atomos_xlink_hw_config)/description/assets/calibration_tool.stl" />
-      </geometry>
-    </visual>
-  </link>
-  <joint name="calibration_tool_joint" type="fixed">
-    <parent link="grasp_link" />
-    <child link="calibration_tool_link" />
-    <origin xyz="0 0 0.011" rpy="0 0 0" />
-  </joint>
-
-  <link name="calibration_tool_frame" />
-  <joint name="calibration_tool_frame_joint" type="fixed">
-    <parent link="calibration_tool_link" />
-    <child link="calibration_tool_frame" />
-    <origin xyz="0 -0.09325 -0.01" rpy="0 ${pi} ${pi}" />
-  </joint>
+  <!--<link name="calibration_tool_link">-->
+  <!--  <visual>-->
+  <!--    <geometry>-->
+  <!--      <mesh-->
+  <!--        filename="file://$(find atomos_xlink_hw_config)/description/assets/calibration_tool.stl" />-->
+  <!--    </geometry>-->
+  <!--  </visual>-->
+  <!--</link>-->
+  <!--<joint name="calibration_tool_joint" type="fixed">-->
+  <!--  <parent link="grasp_link" />-->
+  <!--  <child link="calibration_tool_link" />-->
+  <!--  <origin xyz="0 0 0.011" rpy="0 0 0" />-->
+  <!--</joint>-->
+  <!---->
+  <!--<link name="calibration_tool_frame" />-->
+  <!--<joint name="calibration_tool_frame_joint" type="fixed">-->
+  <!--  <parent link="calibration_tool_link" />-->
+  <!--  <child link="calibration_tool_frame" />-->
+  <!--  <origin xyz="0 -0.09325 -0.01" rpy="0 ${pi} ${pi}" />-->
+  <!--</joint>-->
 
   <!-- zed camera calibration pose-->
   <link name="estimated_zed_base_frame" />
