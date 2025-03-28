@@ -594,14 +594,14 @@
       <visual>
         <origin rpy="0 0 0" xyz="-0.01 0 0.0" />
         <geometry>
-          <mesh filename="file:///opt/ros/humble/share/zed_msgs/meshes/zed2i.stl" />
+          <mesh filename="package://zed_msgs/meshes/zed2i.stl" />
         </geometry>
         <material name="zed2i_mat" />
       </visual>
       <collision>
         <origin rpy="0 0 0" xyz="-0.01 0 0.0" />
         <geometry>
-          <mesh filename="file:///opt/ros/humble/share/zed_msgs/meshes/zed2i.stl" />
+          <mesh filename="package://zed_msgs/meshes/zed2i.stl" />
         </geometry>
       </collision>
     </link>
