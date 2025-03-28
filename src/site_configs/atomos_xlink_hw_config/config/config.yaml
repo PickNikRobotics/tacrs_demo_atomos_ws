@@ -13,6 +13,9 @@ hardware:
     urdf:
       package: "atomos_xlink_hw_config"
       path: "description/motiv_xlink_atomos.mock.urdf" #Using manual urdf for control over xlink position w.r.t. servicer sled.
+    srdf:
+      package: "atomos_xlink_hw_config"
+      path: "config/moveit/atomos_xlink.srdf"
 
 
 # Configuration for loading behaviors and objectives.
