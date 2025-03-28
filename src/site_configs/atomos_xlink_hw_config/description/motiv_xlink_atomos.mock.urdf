@@ -603,6 +603,12 @@
          filename="file://$(find atomos_xlink_hw_config)/description/assets/calibration_tool.stl" />
      </geometry>
    </visual>
+   <collision>
+     <geometry>
+        <mesh
+          filename="file://$(find atomos_xlink_hw_config)/description/assets/calibration_tool.stl" />
+      </geometry>
+    </collision>
   </link>
   <joint name="calibration_tool_joint" type="fixed">
    <parent link="grasp_link" />

@@ -59,6 +59,486 @@
     - joint_6
     - joint_7
     position:
+    - -1.4046504497528076
+    - 2.1503818035125732
+    - -0.7100069522857666
+    - 1.5279076099395752
+    - 1.2068380117416382
+    - 0.21133041381835938
+    - -0.18647527694702148
+    velocity: []
+  multi_dof_joint_state:
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    joint_names: []
+    transforms: []
+    twist: []
+    wrench: []
+  name: cal_high_right
+- description: ''
+  favorite: false
+  joint_group_names:
+  - xlink_arm
+  - xlink_gripper
+  joint_state:
+    effort: []
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    name:
+    - joint_1
+    - joint_2
+    - joint_3
+    - joint_4
+    - joint_5
+    - joint_6
+    - joint_7
+    position:
+    - 1.2507476806640625
+    - -0.5183308124542236
+    - 0.3192124366760254
+    - -1.9320168495178223
+    - 0.35091090202331543
+    - -1.4161186218261719
+    - 3.847363233566284
+    velocity: []
+  multi_dof_joint_state:
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    joint_names: []
+    transforms: []
+    twist: []
+    wrench: []
+  name: cal_low_left
+- description: ''
+  favorite: false
+  joint_group_names:
+  - xlink_arm
+  - xlink_gripper
+  joint_state:
+    effort: []
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    name:
+    - joint_1
+    - joint_2
+    - joint_3
+    - joint_4
+    - joint_5
+    - joint_6
+    - joint_7
+    position:
+    - -0.041513919830322266
+    - 1.256991982460022
+    - 1.4817205667495728
+    - 0.5482790470123291
+    - -1.752049207687378
+    - -0.7588903903961182
+    - -1.03593111038208
+    velocity: []
+  multi_dof_joint_state:
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    joint_names: []
+    transforms: []
+    twist: []
+    wrench: []
+  name: cal_low_right
+- description: ''
+  favorite: false
+  joint_group_names:
+  - xlink_arm
+  - xlink_gripper
+  joint_state:
+    effort: []
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    name:
+    - joint_1
+    - joint_2
+    - joint_3
+    - joint_4
+    - joint_5
+    - joint_6
+    - joint_7
+    position:
+    - 0.344271183013916
+    - 0.4905872344970703
+    - 1.2876715660095215
+    - 0.9877536296844482
+    - 1.1271787881851196
+    - 0.6194181442260742
+    - 2.1728758811950684
+    velocity: []
+  multi_dof_joint_state:
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    joint_names: []
+    transforms: []
+    twist: []
+    wrench: []
+  name: cal_mid_2
+- description: ''
+  favorite: false
+  joint_group_names:
+  - xlink_arm
+  - xlink_gripper
+  joint_state:
+    effort: []
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    name:
+    - joint_1
+    - joint_2
+    - joint_3
+    - joint_4
+    - joint_5
+    - joint_6
+    - joint_7
+    position:
+    - 0.1911003589630127
+    - 0.5394589900970459
+    - 1.796750545501709
+    - 0.26271843910217285
+    - 1.682373046875
+    - 0.7965812683105469
+    - 1.1062536239624023
+    velocity: []
+  multi_dof_joint_state:
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    joint_names: []
+    transforms: []
+    twist: []
+    wrench: []
+  name: cal_mid_far
+- description: ''
+  favorite: false
+  joint_group_names:
+  - xlink_arm
+  - xlink_gripper
+  joint_state:
+    effort: []
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    name:
+    - joint_1
+    - joint_2
+    - joint_3
+    - joint_4
+    - joint_5
+    - joint_6
+    - joint_7
+    position:
+    - 0.7213554382324219
+    - -0.08116936683654785
+    - -0.3497004508972168
+    - -1.9649858474731445
+    - 0.24063193798065186
+    - -1.791417121887207
+    - -1.1802091598510742
+    velocity: []
+  multi_dof_joint_state:
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    joint_names: []
+    transforms: []
+    twist: []
+    wrench: []
+  name: cal_mid_low
+- description: ''
+  favorite: false
+  joint_group_names:
+  - xlink_arm
+  - xlink_gripper
+  joint_state:
+    effort: []
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    name:
+    - joint_1
+    - joint_2
+    - joint_3
+    - joint_4
+    - joint_5
+    - joint_6
+    - joint_7
+    position:
+    - 0.14526057243347168
+    - 1.40871262550354
+    - 1.0127289295196533
+    - 0.9772074222564697
+    - -1.8207669258117676
+    - -0.33895039558410645
+    - -0.522801399230957
+    velocity: []
+  multi_dof_joint_state:
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    joint_names: []
+    transforms: []
+    twist: []
+    wrench: []
+  name: cal_mid_right
+- description: ''
+  favorite: false
+  joint_group_names:
+  - xlink_arm
+  - xlink_gripper
+  joint_state:
+    effort: []
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    name:
+    - joint_1
+    - joint_2
+    - joint_3
+    - joint_4
+    - joint_5
+    - joint_6
+    - joint_7
+    position:
+    - 2.472182512283325
+    - -0.9639649391174316
+    - -0.3624396324157715
+    - -1.8776564598083496
+    - 0.22930681705474854
+    - -1.497887134552002
+    - 3.789095640182495
+    velocity: []
+  multi_dof_joint_state:
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    joint_names: []
+    transforms: []
+    twist: []
+    wrench: []
+  name: cal_middle
+- description: ''
+  favorite: false
+  joint_group_names:
+  - xlink_arm
+  - xlink_gripper
+  joint_state:
+    effort: []
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    name:
+    - joint_1
+    - joint_2
+    - joint_3
+    - joint_4
+    - joint_5
+    - joint_6
+    - joint_7
+    position:
+    - -0.02326178550720215
+    - 0.869349479675293
+    - 0.9539940357208252
+    - 1.1255964040756226
+    - 0.6230612993240356
+    - 0.05071759223937988
+    - 3.406306743621826
+    velocity: []
+  multi_dof_joint_state:
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    joint_names: []
+    transforms: []
+    twist: []
+    wrench: []
+  name: cal_middle_high
+- description: ''
+  favorite: false
+  joint_group_names:
+  - xlink_arm
+  - xlink_gripper
+  joint_state:
+    effort: []
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    name:
+    - joint_1
+    - joint_2
+    - joint_3
+    - joint_4
+    - joint_5
+    - joint_6
+    - joint_7
+    position:
+    - 0.5311295986175537
+    - 1.1903355121612549
+    - 0.4980294704437256
+    - 1.2553138732910156
+    - 0.3862285614013672
+    - -0.4150502681732178
+    - 3.5604841709136963
+    velocity: []
+  multi_dof_joint_state:
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    joint_names: []
+    transforms: []
+    twist: []
+    wrench: []
+  name: cal_middle_pitched
+- description: ''
+  favorite: false
+  joint_group_names:
+  - xlink_arm
+  - xlink_gripper
+  joint_state:
+    effort: []
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    name:
+    - joint_1
+    - joint_2
+    - joint_3
+    - joint_4
+    - joint_5
+    - joint_6
+    - joint_7
+    position:
+    - 0.016993284225463867
+    - 0.8237733840942383
+    - 1.9023796319961548
+    - -0.0513768196105957
+    - 1.8042049407958984
+    - 1.0528404712677002
+    - 0.9986710548400879
+    velocity: []
+  multi_dof_joint_state:
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    joint_names: []
+    transforms: []
+    twist: []
+    wrench: []
+  name: cal_middle_right
+- description: ''
+  favorite: false
+  joint_group_names:
+  - xlink_arm
+  - xlink_gripper
+  joint_state:
+    effort: []
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    name:
+    - joint_1
+    - joint_2
+    - joint_3
+    - joint_4
+    - joint_5
+    - joint_6
+    - joint_7
+    position:
+    - 1.4757640361785889
+    - -1.6899709701538086
+    - -0.1592707633972168
+    - -0.6588582992553711
+    - -0.03390336036682129
+    - 0.9147099256515503
+    - -1.5183091163635254
+    velocity: []
+  multi_dof_joint_state:
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    joint_names: []
+    transforms: []
+    twist: []
+    wrench: []
+  name: high cal
+- description: ''
+  favorite: false
+  joint_group_names:
+  - xlink_arm
+  - xlink_gripper
+  joint_state:
+    effort: []
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    name:
+    - joint_1
+    - joint_2
+    - joint_3
+    - joint_4
+    - joint_5
+    - joint_6
+    - joint_7
+    position:
     - 0.00038313865661621094
     - -2.1648826599121094
     - -0.00011992454528808594

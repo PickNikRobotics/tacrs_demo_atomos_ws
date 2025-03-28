@@ -4,9 +4,10 @@
   <BehaviorTree ID="Calibrate Scene Camera 36h11" _description="Uses april tags detected from 36h11.launch." _favorite="false" _subtreeOnly="false">
     <Control ID="Sequence" name="TopLevelSequence">
       <Action ID="LoadObjectiveParameters" parameters="{parameters}" config_file_name="51mm_apriltag_detection_config.yaml"/>
-      <SubTree ID="Calibrate Camera at Waypoint 36h11" _collapsed="true" computed_poses_vector="{computed_poses_vector}" parameters="{parameters}" waypoint_name="test2"/>
-      <SubTree ID="Calibrate Camera at Waypoint 36h11" _collapsed="true" computed_poses_vector="{computed_poses_vector}" parameters="{parameters}" waypoint_name="test1"/>
-      <SubTree ID="Calibrate Camera at Waypoint 36h11" _collapsed="true" computed_poses_vector="{computed_poses_vector}" parameters="{parameters}" waypoint_name="test1"/>
+      <SubTree ID="Calibrate Camera at Waypoint 36h11" _collapsed="true" computed_poses_vector="{computed_poses_vector}" parameters="{parameters}" waypoint_name="cal_low_left"/>
+      <SubTree ID="Calibrate Camera at Waypoint 36h11" _collapsed="true" computed_poses_vector="{computed_poses_vector}" parameters="{parameters}" waypoint_name="cal_middle"/>
+      <SubTree ID="Calibrate Camera at Waypoint 36h11" _collapsed="true" computed_poses_vector="{computed_poses_vector}" parameters="{parameters}" waypoint_name="cal_middle_high"/>
+      <SubTree ID="Calibrate Camera at Waypoint 36h11" _collapsed="true" computed_poses_vector="{computed_poses_vector}" parameters="{parameters}" waypoint_name="cal_high_right"/>
       <Decorator ID="ForEach" index="{index}" out="{out}" vector_in="{computed_poses_vector}">
         <Control ID="Sequence" name="TopLevelSequence">
           <Action ID="Script" code="name := index"/>
@@ -25,32 +26,7 @@
     </Control>
   </BehaviorTree>
   <TreeNodesModel>
-    <SubTree ID="Calibrate Scene Camera 36h11">
-      <MetadataFields>
-        <Metadata runnable="true"/>
-      </MetadataFields>
-      <MetadataFields>
-        <Metadata runnable="true"/>
-      </MetadataFields>
-      <MetadataFields>
-        <Metadata runnable="true"/>
-      </MetadataFields>
-      <MetadataFields>
-        <Metadata runnable="true"/>
-      </MetadataFields>
-      <MetadataFields>
-        <Metadata runnable="true"/>
-      </MetadataFields>
-      <MetadataFields>
-        <Metadata runnable="true"/>
-      </MetadataFields>
-      <MetadataFields>
-        <Metadata runnable="true"/>
-      </MetadataFields>
-      <MetadataFields>
-        <Metadata runnable="true"/>
-      </MetadataFields>
-    <MetadataFields>
+    <SubTree ID="Calibrate Scene Camera 36h11"><MetadataFields>
         <Metadata runnable="true"/>
       </MetadataFields></SubTree>
   </TreeNodesModel>

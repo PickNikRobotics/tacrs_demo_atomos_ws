@@ -1,0 +1,824 @@
+Panels:
+  - Class: rviz_common/Displays
+    Help Height: 70
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /PlanningScene1/Scene Robot1
+        - /PlanningScene1/Scene Robot1/Links1
+        - /TF1
+        - /TF1/Frames1
+        - /StudioVisionPointCloudSnapshot1/Topic1
+        - /LeftCamera1
+        - /RightCamera1
+      Splitter Ratio: 0.48170730471611023
+    Tree Height: 227
+  - Class: moveit_task_constructor/Motion Planning Tasks
+    Global Settings:
+      Task View Settings:
+        Old task handling: Remove
+        Show Computation Times: true
+        Task Expansion: All Expanded
+    Name: Motion Planning Tasks
+    Tasks View:
+      property_splitter:
+        - 199
+        - 97
+      solution_sorting:
+        column: 0
+        order: 1
+      solutions_splitter:
+        - 48
+        - 48
+      solutions_view_columns: ~
+      tasks_view_columns:
+        - 26
+        - 26
+        - 26
+        - 35
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz_default_plugins/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Class: moveit_rviz_plugin/PlanningScene
+      Enabled: true
+      Move Group Namespace: ""
+      Name: PlanningScene
+      Planning Scene Topic: /monitored_planning_scene
+      Robot Description: robot_description
+      Scene Geometry:
+        Scene Alpha: 0.8999999761581421
+        Scene Color: 50; 230; 50
+        Scene Display Time: 0.20000000298023224
+        Show Scene Geometry: true
+        Voxel Coloring: Z-Axis
+        Voxel Rendering: Occupied Voxels
+      Scene Robot:
+        Attached Body Color: 150; 50; 150
+        Links:
+          All Links Enabled: false
+          Expand Joint Details: false
+          Expand Link Details: false
+          Expand Tree: false
+          Link Tree Style: Links in Alphabetic Order
+          back:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          base_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          calibration_tool_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          calibration_tool_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          estimated_zed_base_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          floor:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fts_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          grasp_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          gripper_manipulation_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          left_finger_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          left_inner_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          left_outer_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          link_1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          link_2:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          link_3:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          link_4:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          link_5:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          link_6:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          link_7:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          manual_grasp_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          right_finger_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          right_inner_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          right_outer_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          servicer_sled_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          tank_air_hoses:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          world:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          xlink_gripper_base:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          zed_camera_center:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: false
+          zed_camera_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          zed_left_camera_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          zed_left_camera_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          zed_right_camera_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          zed_right_camera_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+        Robot Alpha: 1
+        Show Robot Collision: false
+        Show Robot Visual: true
+      Value: true
+    - Class: rviz_default_plugins/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: false
+        back:
+          Value: false
+        base_link:
+          Value: false
+        calibration_tag_bottom:
+          Value: true
+        calibration_tag_left:
+          Value: true
+        calibration_tag_right:
+          Value: true
+        calibration_tool_frame:
+          Value: false
+        calibration_tool_link:
+          Value: false
+        estimated_zed_base_frame:
+          Value: false
+        floor:
+          Value: false
+        fts_link:
+          Value: false
+        grasp_link:
+          Value: false
+        gripper_manipulation_link:
+          Value: false
+        left_finger_link:
+          Value: false
+        left_inner_link:
+          Value: false
+        left_outer_link:
+          Value: false
+        link_1:
+          Value: false
+        link_2:
+          Value: false
+        link_3:
+          Value: false
+        link_4:
+          Value: false
+        link_5:
+          Value: false
+        link_6:
+          Value: false
+        link_7:
+          Value: false
+        manual_grasp_link:
+          Value: false
+        right_finger_link:
+          Value: false
+        right_inner_link:
+          Value: false
+        right_outer_link:
+          Value: false
+        servicer_sled_link:
+          Value: false
+        tank_air_hoses:
+          Value: false
+        world:
+          Value: false
+        xlink_gripper_base:
+          Value: false
+        zed_camera_center:
+          Value: false
+        zed_camera_link:
+          Value: false
+        zed_left_camera_frame:
+          Value: false
+        zed_left_camera_optical_frame:
+          Value: false
+        zed_right_camera_frame:
+          Value: false
+        zed_right_camera_optical_frame:
+          Value: false
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: false
+      Tree:
+        world:
+          servicer_sled_link:
+            back:
+              {}
+            base_link:
+              link_1:
+                link_2:
+                  link_3:
+                    link_4:
+                      link_5:
+                        link_6:
+                          link_7:
+                            fts_link:
+                              xlink_gripper_base:
+                                gripper_manipulation_link:
+                                  grasp_link:
+                                    calibration_tool_link:
+                                      calibration_tool_frame:
+                                        {}
+                                  manual_grasp_link:
+                                    {}
+                                left_inner_link:
+                                  {}
+                                left_outer_link:
+                                  left_finger_link:
+                                    {}
+                                right_inner_link:
+                                  {}
+                                right_outer_link:
+                                  right_finger_link:
+                                    {}
+            estimated_zed_base_frame:
+              zed_camera_link:
+                zed_camera_center:
+                  zed_left_camera_frame:
+                    zed_left_camera_optical_frame:
+                      calibration_tag_bottom:
+                        {}
+                      calibration_tag_left:
+                        {}
+                      calibration_tag_right:
+                        {}
+                  zed_right_camera_frame:
+                    zed_right_camera_optical_frame:
+                      {}
+            floor:
+              {}
+            tank_air_hoses:
+              {}
+      Update Interval: 0
+      Value: true
+    - Class: rviz_default_plugins/InteractiveMarkers
+      Enable Transparency: true
+      Enabled: false
+      Interactive Markers Namespace: /jog_control
+      Name: InteractiveMarkers
+      Show Axes: false
+      Show Descriptions: true
+      Show Visual Aids: false
+      Value: false
+    - Class: rviz_default_plugins/InteractiveMarkers
+      Enable Transparency: true
+      Enabled: false
+      Interactive Markers Namespace: /mesh_control
+      Name: InteractiveMarkers
+      Show Axes: false
+      Show Descriptions: true
+      Show Visual Aids: false
+      Value: false
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: false
+      Name: MarkerArray
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /visual_markers
+      Value: false
+    - Class: moveit_task_constructor/Motion Planning Tasks
+      Enabled: true
+      Interrupt Display: false
+      Loop Animation: false
+      Markers:
+        All at once?: false
+        Value: true
+      Name: Motion Planning Tasks
+      Robot:
+        Fixed Robot Color: 150; 50; 150
+        Links:
+          All Links Enabled: true
+          Expand Joint Details: false
+          Expand Link Details: false
+          Expand Tree: false
+          Link Tree Style: Links in Alphabetic Order
+          back:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          base_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          calibration_tool_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          calibration_tool_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          estimated_zed_base_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          floor:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fts_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          grasp_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          gripper_manipulation_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          left_finger_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          left_inner_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          left_outer_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          link_1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          link_2:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          link_3:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          link_4:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          link_5:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          link_6:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          link_7:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          manual_grasp_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          right_finger_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          right_inner_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          right_outer_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          servicer_sled_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          tank_air_hoses:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          world:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          xlink_gripper_base:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          zed_camera_center:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          zed_camera_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          zed_left_camera_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          zed_left_camera_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          zed_right_camera_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          zed_right_camera_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+        Robot Alpha: 0.5
+        Show Robot Collision: false
+        Show Robot Visual: true
+        Use Fixed Robot Color: false
+        Value: ""
+      Robot Description: robot_description
+      Scene:
+        Attached Body Color: 150; 50; 150
+        Scene Alpha: 0.8999999761581421
+        Scene Color: 50; 230; 50
+        Value: true
+        Voxel Coloring: Z-Axis
+        Voxel Rendering: Occupied Voxels
+      Show Trail: false
+      State Display Time: 0.05 s
+      Task Solution Topic: /solution
+      Tasks:
+        {}
+      Trail Step Size: 1
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: RGB8
+      Decay Time: 0
+      Enabled: false
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 4096
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: WristCameraPointCloud
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Points
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Value: /scene_camera/depth/color/points
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: RGB8
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 4096
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: StudioVisionPointCloudSnapshot
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Points
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /studio_vision_debug_snapshot
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Class: rviz_default_plugins/Image
+      Enabled: false
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: SceneImage
+      Normalize Range: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Value: /scene_camera/color/image_raw
+      Value: false
+    - Class: rviz_default_plugins/Camera
+      Enabled: true
+      Far Plane Distance: 100
+      Image Rendering: background and overlay
+      Name: LeftCamera
+      Overlay Alpha: 0.5
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Value: /zed2i_camera/left/image_raw_color
+      Value: true
+      Visibility:
+        Grid: false
+        InteractiveMarkers: false
+        MarkerArray: true
+        Motion Planning Tasks: false
+        PlanningScene: true
+        RightCamera: true
+        SceneImage: false
+        StudioVisionMarkerArray: true
+        StudioVisionPointCloudSnapshot: true
+        TF: true
+        Value: true
+        WristCameraPointCloud: false
+      Zoom Factor: 1
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: false
+      Name: StudioVisionMarkerArray
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /studio_vision_debug
+      Value: false
+    - Class: rviz_default_plugins/Camera
+      Enabled: true
+      Far Plane Distance: 100
+      Image Rendering: background and overlay
+      Name: RightCamera
+      Overlay Alpha: 0.5
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Value: /zed2i_camera/right/image_raw_color
+      Value: true
+      Visibility:
+        Grid: false
+        InteractiveMarkers: false
+        LeftCamera: true
+        MarkerArray: true
+        Motion Planning Tasks: false
+        PlanningScene: true
+        SceneImage: false
+        StudioVisionMarkerArray: true
+        StudioVisionPointCloudSnapshot: true
+        TF: true
+        Value: true
+        WristCameraPointCloud: false
+      Zoom Factor: 1
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: world
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+      Hide Inactive Objects: true
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+      Line color: 128; 128; 0
+    - Class: rviz_default_plugins/SetInitialPose
+      Covariance x: 0.25
+      Covariance y: 0.25
+      Covariance yaw: 0.06853891909122467
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /initialpose
+    - Class: rviz_default_plugins/SetGoal
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /goal_pose
+    - Class: rviz_default_plugins/PublishPoint
+      Single click: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /clicked_point
+  Transformation:
+    Current:
+      Class: rviz_default_plugins/TF
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 0.8297204971313477
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: 0.16208425164222717
+        Y: -0.44692206382751465
+        Z: 0.4657813012599945
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 0.24979698657989502
+      Target Frame: <Fixed Frame>
+      Value: Orbit (rviz)
+      Yaw: 2.5500082969665527
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 1016
+  Hide Left Dock: false
+  Hide Right Dock: false
+  LeftCamera:
+    collapsed: false
+  Motion Planning Tasks:
+    collapsed: false
+  Motion Planning Tasks - Slider:
+    collapsed: false
+  QMainWindow State: 000000ff00000000fd0000000200000000000002e3000003c9fc0200000008fb000000100044006900730070006c006100790073000000001400000164000000c700fffffffb000000120020002d00200053006c00690064006500720000000000ffffffff0000000000000000fb0000002a004d006f00740069006f006e00200050006c0061006e006e0069006e00670020005400610073006b007300000001e4000001f9000000e300fffffffb0000002c004d006f00740069006f006e00200050006c0061006e006e0069006e00670020005300740061006700650073000000034b000000ad0000000000000000fb0000003c004d006f00740069006f006e00200050006c0061006e006e0069006e00670020005400610073006b00730020002d00200053006c00690064006500720000000000ffffffff0000003f00fffffffb00000014004c00650066007400430061006d0065007200610100000014000003c90000002800fffffffb00000014005300630065006e00650049006d00610067006500000001fc000001e10000002800fffffffb0000000c00430061006d006500720061010000026b000000a00000000000000000000000010000038d000003c9fc0200000003fb000000160052006900670068007400430061006d0065007200610100000014000003c90000002800fffffffb00000014005300630065006e00650049006d006100670065000000003d0000013d0000000000000000fb000000160057007200690073007400430061006d006500720061000000003b000003a2000000000000000000000384000003c900000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730000000000ffffffff0000000000000000
+  RightCamera:
+    collapsed: false
+  SceneImage:
+    collapsed: false
+  Width: 2560
+  X: 0
+  Y: 27

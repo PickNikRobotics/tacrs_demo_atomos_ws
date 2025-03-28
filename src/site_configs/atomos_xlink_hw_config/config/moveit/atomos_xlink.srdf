@@ -125,4 +125,10 @@
     <disable_collisions link1="left_outer_link" link2="right_inner_link" reason="Never" />
     <disable_collisions link1="back" link2="base_link" reason="Never" />
     <disable_collisions link1="back" link2="link_1" reason="Never" />
+    <disable_collisions link1="calibration_tool_link" link2="left_inner_link" reason="Never" />
+    <disable_collisions link1="calibration_tool_link" link2="left_outer_link" reason="Never" />
+    <disable_collisions link1="calibration_tool_link" link2="left_finger_link" reason="Never" />
+    <disable_collisions link1="calibration_tool_link" link2="right_inner_link" reason="Never" />
+    <disable_collisions link1="calibration_tool_link" link2="right_outer_link" reason="Never" />
+    <disable_collisions link1="calibration_tool_link" link2="right_finger_link" reason="Never" />
 </robot>
