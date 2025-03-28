@@ -66,7 +66,9 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
       gstreamer1.0-plugins-base \
       # Dependencies for zed_open_capture_ros
       wget \
-      libhidapi-dev
+      libhidapi-dev \
+      # Other deps
+      libmrpt-dev
 
 # Install additional dependencies
 # You can also add any necessary apt-get install, pip install, etc. commands at this point.
