@@ -198,3 +198,43 @@
     twist: []
     wrench: []
   name: start_grapple_2
+- description: ''
+  favorite: false
+  joint_group_names:
+  - xlink_arm
+  - xlink_gripper
+  joint_state:
+    effort: []
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    name:
+    - joint_1
+    - joint_2
+    - joint_3
+    - joint_4
+    - joint_5
+    - joint_6
+    - joint_7
+    position:
+    - 1.5708091355555818
+    - -1.750498798965083
+    - -0.06662050781842749
+    - -1.790616318085534
+    - 0.10586892689414143
+    - 1.4915303716238033
+    - -0.09289015038323976
+    velocity: []
+  multi_dof_joint_state:
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    joint_names: []
+    transforms: []
+    twist: []
+    wrench: []
+  name: test_self_collision

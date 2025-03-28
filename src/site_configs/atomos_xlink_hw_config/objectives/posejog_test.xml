@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root BTCPP_format="4" main_tree_to_execute="poseJog test">
+  <!--//////////-->
+  <BehaviorTree ID="poseJog test" _description="" _favorite="true" _subtreeOnly="false">
+    <Control ID="Sequence" name="TopLevelSequence">
+      <Action ID="ActivateControllers" controller_names="/velocity_force_controller"/>
+      <Action ID="CreateStampedWrench" torque_xyz="0.0;0.0;0.0" force_xyz="0.0;0.0;0.0" stamped_wrench="{desired_wrench}" name="Always 0, not using Force" reference_frame="world"/>
+      <Action ID="CreateStampedTwist" name="Init 0 Pose (until FF-VFC outputs)" angular_velocity_xyz="0;0;0" linear_velocity_xyz="0;-0.02;0" stamped_twist="{desired_twist}" reference_frame="grasp_link"/>
+      <Control ID="Parallel" failure_count="1" success_count="1">
+        <Control ID="Sequence" name="TopLevelSequence">
+          <Decorator ID="KeepRunningUntilFailure">
+            <Action ID="PublishVelocityForceCommand" wrench_gain="0.1" velocity_controlled_axes="1;1;1;1;1;1" force_controlled_axes="0;0;0;0;0;0" publish_rate="10" twist_stamped="{desired_twist}" velocity_force_controller_command_topic="/velocity_force_controller/command" wrench_stamped="{desired_wrench}"/>
+          </Decorator>
+        </Control>
+        <Decorator ID="KeepRunningUntilFailure">
+          <Action ID="PoseJog" controller_names="velocity_force_controller" link_padding="0.030000" planning_group_names="xlink_arm" stop_safety_factor="1.200000"/>
+        </Decorator>
+      </Control>
+    </Control>
+  </BehaviorTree>
+  <TreeNodesModel>
+    <SubTree ID="poseJog test"><MetadataFields>
+        <Metadata runnable="true"/>
+      </MetadataFields></SubTree>
+  </TreeNodesModel>
+</root>
