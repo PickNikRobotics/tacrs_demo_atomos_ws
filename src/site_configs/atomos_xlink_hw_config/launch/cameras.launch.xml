@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <launch>
     <node pkg="zed_open_capture_ros" exec="zed_open_capture_ros" name="zed_camera" namespace=""/>
+    <node pkg="image_proc" exec="rectify_node" name="zed_left_rectify_node" namespace="/zed2i_camera/left">
+        <remap from="image" to="/zed2i_camera/left/image_raw_color"/>
+        <remap from="image_rect" to="/zed2i_camera/left/image_rect_color"/>
+    </node>
+    <node pkg="image_proc" exec="rectify_node" name="zed_right_rectify_node" namespace="/zed2i_camera/right">
+        <remap from="image" to="/zed2i_camera/right/image_raw_color"/>
+        <remap from="image_rect" to="/zed2i_camera/right/image_rect_color"/>
+    </node>
 </launch>

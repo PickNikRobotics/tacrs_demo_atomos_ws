@@ -13,6 +13,7 @@
 
   <depend>motiv_xlink_hw_config</depend>
   <depend>apriltag_ros</depend>
+  <depend>image_proc</depend>
 
   <export>
     <build_type>ament_cmake</build_type>

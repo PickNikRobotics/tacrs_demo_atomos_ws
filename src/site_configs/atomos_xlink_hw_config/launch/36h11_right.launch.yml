@@ -15,7 +15,7 @@ launch:
       namespace: apriltag_right
       remap:
       - from: /apriltag_right/image_rect
-        to: /zed2i_camera/right/image_raw_color
+        to: /zed2i_camera/right/image_rect_color
       - from: /apriltag_right/camera_info
         to: /zed2i_camera/right/camera_info
       param:
