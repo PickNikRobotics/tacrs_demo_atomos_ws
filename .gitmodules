@@ -4,3 +4,6 @@
 [submodule "src/dependencies/zed_open_capture_ros"]
 	path = src/dependencies/zed_open_capture_ros
 	url = git@github.com:PickNikRobotics/zed_open_capture_ros.git
+[submodule "src/dependencies/apriltag_ros"]
+	path = src/dependencies/apriltag_ros
+	url = git@github.com:PickNikRobotics/apriltag_ros.git
