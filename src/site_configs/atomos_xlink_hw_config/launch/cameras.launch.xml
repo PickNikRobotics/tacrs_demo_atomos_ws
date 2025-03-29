@@ -9,4 +9,5 @@
         <remap from="image" to="/zed2i_camera/right/image_raw_color"/>
         <remap from="image_rect" to="/zed2i_camera/right/image_rect_color"/>
     </node>
+    <include file="$(find-pkg-share atomos_xlink_hw_config)/launch/realsense.launch.xml"/>
 </launch>
