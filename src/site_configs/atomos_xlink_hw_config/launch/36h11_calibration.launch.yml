@@ -18,8 +18,8 @@ launch:
         to: /camera/scene_camera/color/image_raw
       - from: /apriltag/camera_info
         to: /camera/scene_camera/color/camera_info
-      - from: /apriltag/rgbd
-        to: /camera/scene_camera/rgbd
+      - from: /apriltag/depth_image
+        to: /camera/scene_camera/aligned_depth_to_color/image_raw
       param:
       - from: $(find-pkg-share atomos_xlink_hw_config)/launch/tags_36h11_calibration.yaml
       extra_arg:
