@@ -9,6 +9,26 @@ foreach(package IN ITEMS ${THIS_PACKAGE_INCLUDE_DEPENDS})
   find_package(${package} REQUIRED)
 endforeach()
 
+# begin depth_point_publisher stuff
+find_package(sensor_msgs REQUIRED)
+find_package(cv_bridge REQUIRED)
+find_package(image_geometry REQUIRED)
+find_package(OpenCV REQUIRED)
+add_executable(depth_point_publisher_node src/depth_point_publisher.cpp)
+ament_target_dependencies(depth_point_publisher_node
+        rclcpp
+        sensor_msgs
+        geometry_msgs
+        cv_bridge
+        image_geometry
+        OpenCV
+)
+install(TARGETS
+        depth_point_publisher_node
+        DESTINATION lib/${PROJECT_NAME}
+)
+# end depth_point_publisher stuff
+
 add_library(
   calibration_behaviors
   SHARED
