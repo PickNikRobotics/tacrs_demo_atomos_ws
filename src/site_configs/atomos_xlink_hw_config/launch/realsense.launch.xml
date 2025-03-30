@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <launch>
   <arg name="scene_camera_serial_no" default="'210622060661'" />
+<!--  <arg name="scene_camera_serial_no" default="'145522066560'" />-->
 
   <!-- Scene camera  -->
   <include
