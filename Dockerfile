@@ -70,6 +70,23 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
       # Other deps
       libmrpt-dev
 
+# Install zed SDK
+# Set non-interactive mode for apt
+# ENV DEBIAN_FRONTEND=noninteractive
+# Install required dependencies
+RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
+    --mount=type=cache,target=/var/lib/apt,sharing=locked \
+    . /opt/overlay_ws/install/setup.sh && \
+    apt-get update && apt-get install -y \
+    wget zstd && \
+# Download and install ZED SDK
+WORKDIR /tmp
+RUN wget -O ZED_SDK_Linux.run https://download.stereolabs.com/zedsdk/5.0/cu12/ubuntu22 && \
+    chmod +x ZED_SDK_Linux.run && \
+    sudo ./ZED_SDK_Linux.run -- silent skip_od_module skip_python skip_hub skip_tools && \
+    rm -rf ZED_SDK_Linux.run /usr/local/zed/resources/*
+
+
 # Install additional dependencies
 # You can also add any necessary apt-get install, pip install, etc. commands at this point.
 # NOTE: The /opt/overlay_ws folder contains MoveIt Pro binary packages and the source file.
@@ -254,24 +271,24 @@ ENV USER_WS=${USER_WS}
 #########################################
 # ENABLE GPU INFERENCE BY UNCOMMENTING  #
 # #######################################
-# RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
-#     --mount=type=cache,target=/var/lib/apt,sharing=locked \
-#     apt-get update && apt-get install wget -y -q --no-install-recommends && \
-#     wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.1-1_all.deb && \
-#     dpkg -i cuda-keyring_1.1-1_all.deb && \
-#     apt-get update && \
-#     apt-get install -q -y \
-#       libcudnn9-cuda-12 \
-#       libcudnn9-dev-cuda-12 \
-#       libcublas-12-6 \
-#       cuda-cudart-12-6 \
-#       libcurand-12-6 \
-#       libcufft-12-6 \
-#       libnvinfer10 \
-#       libnvinfer-plugin10 \
-#       libnvonnxparsers10 \
-#       libtree
-# ENV LD_LIBRARY_PATH=/usr/local/lib/python3.10/dist-packages/onnxruntime/capi:/usr/lib/x86_64-linux-gnu:/usr/local/cuda-12.6/targets/x86_64-linux/lib:$LD_LIBRARY_PATH
+RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
+    --mount=type=cache,target=/var/lib/apt,sharing=locked \
+    apt-get update && apt-get install wget -y -q --no-install-recommends && \
+    wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.1-1_all.deb && \
+    dpkg -i cuda-keyring_1.1-1_all.deb && \
+    apt-get update && \
+    apt-get install -q -y \
+      libcudnn9-cuda-12 \
+      libcudnn9-dev-cuda-12 \
+      libcublas-12-6 \
+      cuda-cudart-12-6 \
+      libcurand-12-6 \
+      libcufft-12-6 \
+      libnvinfer10 \
+      libnvinfer-plugin10 \
+      libnvonnxparsers10 \
+      libtree
+ENV LD_LIBRARY_PATH=/usr/local/lib/python3.10/dist-packages/onnxruntime/capi:/usr/lib/x86_64-linux-gnu:/usr/local/cuda-12.6/targets/x86_64-linux/lib:$LD_LIBRARY_PATH
 
 # Compile the workspace
 WORKDIR $USER_WS
