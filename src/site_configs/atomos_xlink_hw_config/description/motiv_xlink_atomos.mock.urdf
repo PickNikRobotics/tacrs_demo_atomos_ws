@@ -182,7 +182,8 @@
   <!-- JOINTS -->
   <!-- Dynamics and velocity limits are placeholders -->
   <joint name="base_joint" type="fixed">
-    <origin rpy="1.5708 0.0 1.5708" xyz="0 0 0" />
+    <!--<origin rpy="-0.78539449 -1.57079113 -2.35619449" xyz="0 0 0" />-->
+    <origin rpy="3.14159265 -1.57079633 0" xyz="0 0 0" />
     <parent link="world"/>
     <child link="base_link"/>
   </joint>
@@ -709,8 +710,8 @@
 
   <ros2_control name="xlink_system" type="system">
     <hardware>
-      <plugin>xlink_core_hardware/xLinkSystem</plugin>
-       <!--<plugin>mock_components/GenericSystem</plugin>-->
+      <!--<plugin>xlink_core_hardware/xLinkSystem</plugin>-->
+      <plugin>mock_components/GenericSystem</plugin>
       <param name="bus_device">/dev/ttyUSB0</param>
       <param name="baud_rate">1000000</param>
       <param name="parity">O</param>
