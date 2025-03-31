@@ -2,6 +2,10 @@
   <include file="$(find-pkg-share moveit_studio_agent)/launch/studio_agent_bridge.launch.xml" />
   <include file="$(find-pkg-share zed_wrapper)/launch/zed_camera.launch.py">
     <arg name="camera_model" value="zed2i" />
+    <arg name="publish_urdf" value="false" />
+    <arg name="publish_tf" value="false" />
+    <arg name="publish_map_tf" value="false" />
+    <arg name="publish_imu_tf" value="false" />
   </include>
 <!--  <include file="$(find-pkg-share atomos_xlink_hw_config)/launch/36h11_calibration.launch.yml" />-->
    <include file="$(find-pkg-share atomos_xlink_hw_config)/launch/36h11.launch.yml" />
