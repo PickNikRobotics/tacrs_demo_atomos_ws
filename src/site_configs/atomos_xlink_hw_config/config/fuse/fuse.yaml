@@ -107,14 +107,12 @@ state_estimator:
       # this is the frame that all transforms should be parented to for fuse to use as a measurement
       # thus a measurement will be a tf from `estimation_frame` to any frame in `transforms` (see above)
       estimation_frames:
-        ["zed_left_camera_optical_frame", "zed_right_camera_optical_frame"]
+        ["zed_left_camera_optical_frame"]
       position_dimensions: ["x", "y", "z"]
       orientation_dimensions: ["roll", "pitch", "yaw"]
       # TODO(anyone): set these empirically (collect data and estimate covariances) instead of just with arbitrary values
       pose_covariance:
-        [0.15, 0.15, 0.15, 0.5, 0.5, 0.5,
-        # second estimation frame
-         0.15, 0.15, 0.15, 0.5, 0.5, 0.5]
+        [0.15, 0.15, 0.15, 0.5, 0.5, 0.5]
 
     # this publishes our estimated odometry
     publishers:
