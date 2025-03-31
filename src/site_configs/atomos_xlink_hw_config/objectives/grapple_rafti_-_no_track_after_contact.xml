@@ -45,7 +45,7 @@
                   <Action ID="IsPoseNearIdentity" pose="{error_pose}" position_tolerance="0.02" rotation_tolerance="0.2"/>
                 </Control>
               </Decorator>
-              <Action ID="CreateStampedPose" reference_frame="world" stamped_pose="{target_pose_offset}" orientation_xyzw="-0.7071068;0.7071068;0;0" position_xyz="0;0;0.04"/>
+              <Action ID="CreateStampedPose" reference_frame="world" stamped_pose="{target_pose_offset}" orientation_xyzw="-0.7071068;0.7071068;0;0" position_xyz="-0.02;0;0.07"/>
               <Decorator ID="RetryUntilSuccessful" num_attempts="-1">
                 <Control ID="Sequence">
                   <Action ID="WaitForDuration" name="needed so agent doesn't crash" delay_duration="0.1"/>
