@@ -15,9 +15,11 @@ launch:
       namespace: apriltag
       remap:
       - from: /apriltag/image_rect
-        to: /zed2i_camera/left/image_rect_color
+        to: /zed/zed_node/rgb/image_rect_color
       - from: /apriltag/camera_info
-        to: /zed2i_camera/left/camera_info
+        to: /zed/zed_node/rgb/camera_info
+      - from: /apriltag/depth_image
+        to: /zed/zed_node/depth/depth_registered
       param:
       - from: $(find-pkg-share atomos_xlink_hw_config)/launch/tags_36h11.yaml
       extra_arg:

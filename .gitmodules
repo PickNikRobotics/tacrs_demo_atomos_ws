@@ -10,3 +10,7 @@
 [submodule "src/dependencies/zed-ros2-interfaces"]
 	path = src/dependencies/zed-ros2-interfaces
 	url = https://github.com/stereolabs/zed-ros2-interfaces.git
+[submodule "src/dependencies/apriltag_ros"]
+	path = src/dependencies/apriltag_ros
+	url = git@github.com:PickNikRobotics/apriltag_ros.git
+	branch = add-rgbd-detection-option
