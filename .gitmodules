@@ -6,7 +6,7 @@
 	url = git@github.com:PickNikRobotics/zed_open_capture_ros.git
 [submodule "src/dependencies/zed-ros2-wrapper"]
 	path = src/dependencies/zed-ros2-wrapper
-	url = https://github.com/stereolabs/zed-ros2-wrapper.git
+	url = git@github.com:PickNikRobotics/zed-ros2-wrapper.git
 [submodule "src/dependencies/zed-ros2-interfaces"]
 	path = src/dependencies/zed-ros2-interfaces
 	url = https://github.com/stereolabs/zed-ros2-interfaces.git
