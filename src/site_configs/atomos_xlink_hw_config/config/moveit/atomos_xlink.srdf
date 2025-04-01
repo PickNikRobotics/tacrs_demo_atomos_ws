@@ -131,4 +131,8 @@
     <disable_collisions link1="calibration_tool_link" link2="right_inner_link" reason="Never" />
     <disable_collisions link1="calibration_tool_link" link2="right_outer_link" reason="Never" />
     <disable_collisions link1="calibration_tool_link" link2="right_finger_link" reason="Never" />
+    <disable_collisions link1="xlink_gripper_base" link2="left_finger_link" reason="Never" />
+    <disable_collisions link1="xlink_gripper_base" link2="right_finger_link" reason="Never" />
+    <disable_collisions link1="xlink_gripper_base" link2="left_rafti_finger_link" reason="Never" />
+    <disable_collisions link1="xlink_gripper_base" link2="right_rafti_finger_link" reason="Never" />
 </robot>

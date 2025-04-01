@@ -558,7 +558,8 @@
     <child link="estimated_zed_base_frame" />
     <!-- <origin xyz="-0.035 -0.39 0.24" rpy="0 0 0" /> -->
     <!--<origin xyz="-0.050 -0.37 0.24" rpy="0 0 0" />-->
-    <origin rpy="0 0 0" xyz="-0.024658 -0.37036 0.21471" />
+    <!-- <origin rpy="0 0 0" xyz="-0.024658 -0.37036 0.21471" /> -->
+    <origin rpy="0 0 0" xyz="-0.024752 -0.378874 0.481702" />
   </joint>
 
   <!-- zed camera URDF-->
@@ -662,7 +663,7 @@
   <joint name="floor_joint" type="fixed">
     <parent link="servicer_sled_link" />
     <child link="floor" />
-      <origin rpy="0 0 0" xyz="0 0 -0.57" />
+      <origin rpy="0 0 0" xyz="0 0 -0.47" />
   </joint>
 
   <link name="back">
@@ -710,8 +711,8 @@
 
   <ros2_control name="xlink_system" type="system">
     <hardware>
-      <!--<plugin>xlink_core_hardware/xLinkSystem</plugin>-->
-      <plugin>mock_components/GenericSystem</plugin>
+      <plugin>xlink_core_hardware/xLinkSystem</plugin>
+      <!-- <plugin>mock_components/GenericSystem</plugin> -->
       <param name="bus_device">/dev/ttyUSB0</param>
       <param name="baud_rate">1000000</param>
       <param name="parity">O</param>

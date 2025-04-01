@@ -619,6 +619,46 @@
     - joint_6
     - joint_7
     position:
+    - 0.00038313751498606483
+    - -2.1648762218995072
+    - -0.00011992418933979722
+    - -2.1495607347599113
+    - -0.0007908320738454937
+    - -2.3841785638293453e-05
+    - -0.0007012802564448703
+    velocity: []
+  multi_dof_joint_state:
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    joint_names: []
+    transforms: []
+    twist: []
+    wrench: []
+  name: 1_home
+- description: ''
+  favorite: false
+  joint_group_names:
+  - xlink_arm
+  - xlink_gripper
+  joint_state:
+    effort: []
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    name:
+    - joint_1
+    - joint_2
+    - joint_3
+    - joint_4
+    - joint_5
+    - joint_6
+    - joint_7
+    position:
     - 0.0007305145263671875
     - -1.3544955253601074
     - -1.5598578453063965

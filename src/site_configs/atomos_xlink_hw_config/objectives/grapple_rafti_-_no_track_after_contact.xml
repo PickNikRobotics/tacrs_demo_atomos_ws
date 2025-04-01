@@ -22,7 +22,7 @@
           </Decorator>
         </Control>
         <Control ID="Sequence" name="TopLevelSequence">
-          <Action ID="WaitForDuration" delay_duration="5.000000" name="Publish Odom, but delay to start capture"/>
+          <Action ID="WaitForDuration" delay_duration="2.000000" name="Publish Odom, but delay to start capture"/>
           <Decorator ID="KeepRunningUntilFailure">
             <Action ID="PublishVelocityForceCommand" wrench_gain="0.1" velocity_controlled_axes="1;1;1;1;1;1" force_controlled_axes="0;0;0;0;0;0" publish_rate="10" twist_stamped="{desired_twist}" velocity_force_controller_command_topic="/pose_jog/xlink_arm" wrench_stamped="{desired_wrench}"/>
           </Decorator>
@@ -45,7 +45,7 @@
                   <Action ID="IsPoseNearIdentity" pose="{error_pose}" position_tolerance="0.02" rotation_tolerance="0.2"/>
                 </Control>
               </Decorator>
-              <Action ID="CreateStampedPose" reference_frame="world" stamped_pose="{target_pose_offset}" orientation_xyzw="-0.7071068;0.7071068;0;0" position_xyz="-0.02;0;0.07"/>
+              <Action ID="CreateStampedPose" reference_frame="world" stamped_pose="{target_pose_offset}" orientation_xyzw="-0.7071068;0.7071068;0;0" position_xyz="0;0;0.07"/>
               <Decorator ID="RetryUntilSuccessful" num_attempts="-1">
                 <Control ID="Sequence">
                   <Action ID="WaitForDuration" name="needed so agent doesn't crash" delay_duration="0.1"/>
@@ -64,7 +64,7 @@
             </Control>
             <Control ID="Sequence">
               <Control ID="Fallback">
-                <Decorator ID="Timeout" msec="5000">
+                <Decorator ID="Timeout" msec="6000">
                   <Decorator ID="Repeat" num_cycles="-1">
                     <Control ID="Sequence">
                       <Action ID="WaitForDuration" name="needed so agent doesn't crash" delay_duration="0.1"/>
@@ -77,7 +77,7 @@
               <Action ID="Script" code="desired_twist = desired_twist2" name="Start decay from last pre-close velocity"/>
               <Decorator ID="Repeat" num_cycles="100" name="This * time_step = total decel time. Set to 100 for simplicity.">
                 <Control ID="Sequence" name="">
-                  <Action ID="WaitForDuration" name="time_step for reducing velocity. Set to desired duration (s) / num_cycles." delay_duration="0.05"/>
+                  <Action ID="WaitForDuration" name="time_step for reducing velocity. Set to desired duration (s) / num_cycles." delay_duration="0.07"/>
                   <Action ID="ScaleTwist" input_velocity="{desired_twist}" scaled_velocity="{desired_twist}" velocity_scale="0.97"/>
                 </Control>
               </Decorator>
@@ -85,7 +85,7 @@
           </Control>
         </Control>
       </Control>
-      <Action ID="WaitForDuration" delay_duration="5.000000"/>
+      <Action ID="WaitForDuration" delay_duration="10.000000"/>
       <SubTree ID="Open Gripper" _collapsed="true"/>
     </Control>
   </BehaviorTree>
